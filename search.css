@@ -110,7 +110,10 @@ button:hover {
     object-fit: cover;
 }
 
+
 .actions {
+    display: flex;
+    align-items: center;
     white-space: nowrap;
 }
 
