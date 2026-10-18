@@ -9,9 +9,15 @@
 }
 
 /* General */
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     margin: 0;
     padding: 0;
+    width: 100%;
     font-family: Arial, sans-serif;
 }
 
@@ -100,6 +106,12 @@ body > address {
     line-height: 1.5;
 }
 
+/* Back-to-home image */
+body > a:first-child img {
+    max-width: 100%;
+    height: auto;
+}
+
 /* Gallery detail page images */
 .highlights {
     display: flex;
@@ -140,6 +152,7 @@ body > address {
         --header-height: 4em;
     }
 
+    /* Homepage background */
     header {
         background-size: 100% 100%;
         background-position: center;
@@ -153,6 +166,7 @@ body > address {
         height: 40px;
     }
 
+    /* Homepage gallery */
     .gallery {
         padding: 10px;
         gap: 10px;
@@ -166,22 +180,54 @@ body > address {
         max-width: 100%;
     }
 
-    body > h1 {
-        font-size: 24px;
+    /* Prevent horizontal page overflow */
+    body {
+        overflow-wrap: break-word;
     }
 
+    /* Detail page headings */
+    body > h1,
+    body > h2 {
+        width: auto;
+        max-width: calc(100% - 32px);
+        margin-left: 16px;
+        margin-right: 16px;
+        font-size: 24px;
+        overflow-wrap: break-word;
+        word-break: normal;
+    }
+
+    /* Detail page paragraphs and address */
     body > p,
     body > address {
+        max-width: calc(100% - 32px);
         overflow-wrap: anywhere;
     }
 
+    /* Horizontal dividers */
+    body > hr {
+        max-width: calc(100% - 32px);
+    }
+
+    /* Back-to-home image */
+    body > a:first-child img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Gallery highlights */
     .highlights {
         flex-direction: column;
         align-items: stretch;
+        width: auto;
+        max-width: calc(100% - 32px);
     }
 
     .highlights img {
+        display: block;
         width: 100%;
+        max-width: 100%;
         height: auto;
     }
 }
