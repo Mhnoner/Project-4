@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Store</title>
+
+    <link rel="stylesheet" href="variables-palette-7.css">
+    <link rel="stylesheet" href="search.css">
+</head>
+<body>
+
+<main>
+    <h1>Advanced Art Work Search</h1>
+
+    <form method="GET" action="https://www.randyconnolly.com/tests/process.php">
+
+        <div class="search-box">
+            <input type="text" name="search"
+                   placeholder="Search Titles"
+                   aria-label="Search titles">
+
+            <span>Subject:</span>
+
+            <label>
+                <input type="radio" name="subject" value="1">
+                History
+            </label>
+
+            <label>
+                <input type="radio" name="subject" value="2">
+                Person
+            </label>
+
+            <label>
+                <input type="radio" name="subject" value="3">
+                Landscape
+            </label>
+
+            <select name="genre" aria-label="Select genre">
+                <option value="0">Select Genre</option>
+                <option value="1">Baroque</option>
+                <option value="2">Renaissance</option>
+                <option value="3">Realism</option>
+            </select>
+
+            <button type="submit" name="filter" value="4">
+                Filter
+            </button>
+        </div>
+
+        <div class="bulk-box">
+            <select name="actions" aria-label="Bulk actions">
+                <option value="0">Bulk Actions</option>
+                <option value="1">Archive</option>
+                <option value="2">Edit</option>
+                <option value="3">Delete</option>
+                <option value="4">Collection</option>
+            </select>
+
+            <button type="submit" name="apply" value="1">
+                Apply To All
+            </button>
+
+            <button type="submit" name="search_submit" value="1">
+                Search
+            </button>
+        </div>
+
+        <div class="table-wrapper">
+            <table class="paintings">
+                <caption>Paintings</caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Select</th>
+                        <th scope="col">Image</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Artist</th>
+                        <th scope="col">Year</th>
+                        <th scope="col">Genre</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="index[]" value="10"
+                                   aria-label="Select Portrait of Alida Christina Assink">
+                        </td>
+                        <td>
+                            <img class="painting-image"
+                                 src="painting1.png"
+                                 alt="Portrait of Alida Christina Assink">
+                        </td>
+                        <td>Portrait of Alida Christina Assink</td>
+                        <td>Kruseman</td>
+                        <td>1833</td>
+                        <td>Realism</td>
+                        <td class="actions">
+                            <button type="button" aria-label="Edit painting">
+                                <img src="edit.png" alt="">
+                            </button>
+                            <button type="button" aria-label="View painting">
+                                <img src="view.png" alt="">
+                            </button>
+                            <button type="button" aria-label="Delete painting">
+                                <img src="delete.png" alt="">
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="index[]" value="20"
+                                   aria-label="Select Portrait of Willem II">
+                        </td>
+                        <td>
+                            <img class="painting-image"
+                                 src="painting2.png"
+                                 alt="Portrait of Willem II, King of the Netherlands">
+                        </td>
+                        <td>Portrait of Willem II, King of the Netherlands</td>
+                        <td>Kruseman</td>
+                        <td>1839</td>
+                        <td>Realism</td>
+                        <td class="actions">
+                            <button type="button" aria-label="Edit painting">
+                                <img src="edit.png" alt="">
+                            </button>
+                            <button type="button" aria-label="View painting">
+                                <img src="view.png" alt="">
+                            </button>
+                            <button type="button" aria-label="Delete painting">
+                                <img src="delete.png" alt="">
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="index[]" value="30"
+                                   aria-label="Select Two girls from the Amsterdam Orphanage">
+                        </td>
+                        <td>
+                            <img class="painting-image"
+                                 src="painting3.png"
+                                 alt="Two girls from the Amsterdam Orphanage">
+                        </td>
+                        <td>Two girls from the Amsterdam Orphanage</td>
+                        <td>Breitner</td>
+                        <td>1892</td>
+                        <td>Realism</td>
+                        <td class="actions">
+                            <button type="button" aria-label="Edit painting">
+                                <img src="edit.png" alt="">
+                            </button>
+                            <button type="button" aria-label="View painting">
+                                <img src="view.png" alt="">
+                            </button>
+                            <button type="button" aria-label="Delete painting">
+                                <img src="delete.png" alt="">
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="index[]" value="40"
+                                   aria-label="Select The Windmill at Wijk bij Duurstede">
+                        </td>
+                        <td>
+                            <img class="painting-image"
+                                 src="painting4.png"
+                                 alt="The Windmill at Wijk bij Duurstede">
+                        </td>
+                        <td>The Windmill at Wijk bij Duurstede</td>
+                        <td>Ruisdael</td>
+                        <td>1670</td>
+                        <td>Landscape</td>
+                        <td class="actions">
+                            <button type="button" aria-label="Edit painting">
+                                <img src="edit.png" alt="">
+                            </button>
+                            <button type="button" aria-label="View painting">
+                                <img src="view.png" alt="">
+                            </button>
+                            <button type="button" aria-label="Delete painting">
+                                <img src="delete.png" alt="">
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="index[]" value="50"
+                                   aria-label="Select Morning Ride Along the Beach">
+                        </td>
+                        <td>
+                            <img class="painting-image"
+                                 src="painting5.png"
+                                 alt="Morning Ride Along the Beach">
+                        </td>
+                        <td>Morning Ride Along the Beach</td>
+                        <td>Mauve</td>
+                        <td>1876</td>
+                        <td>Realism</td>
+                        <td class="actions">
+                            <button type="button" aria-label="Edit painting">
+                                <img src="edit.png" alt="">
+                            </button>
+                            <button type="button" aria-label="View painting">
+                                <img src="view.png" alt="">
+                            </button>
+                            <button type="button" aria-label="Delete painting">
+                                <img src="delete.png" alt="">
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </form>
+</main>
+
+</body>
+</html>

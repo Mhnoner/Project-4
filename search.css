@@ -1,0 +1,192 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--color-neutral-050);
+}
+
+main {
+    width: 90%;
+    max-width: 1150px;
+    margin: 20px auto;
+}
+
+h1 {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    background-color: var(--color-primary-1-700);
+}
+
+form {
+    margin-top: 15px;
+}
+
+.search-box,
+.bulk-box {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 10px;
+    background-color: var(--color-neutral-100);
+}
+
+.bulk-box {
+    margin-top: 5px;
+}
+
+input[type="text"] {
+    width: 220px;
+    min-width: 0;
+    padding: 9px;
+    border: 1px solid var(--color-neutral-300);
+}
+
+select {
+    max-width: 100%;
+    padding: 9px;
+    border: 1px solid var(--color-neutral-300);
+    background-color: white;
+}
+
+button {
+    padding: 9px 14px;
+    border: none;
+    background-color: var(--color-primary-1-600);
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--color-primary-1-700);
+}
+
+.table-wrapper {
+    width: 100%;
+    margin-top: 15px;
+    overflow-x: auto;
+}
+
+.paintings {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--color-neutral-050);
+}
+
+.paintings caption {
+    padding: 10px;
+    background-color: var(--color-primary-1-700);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.paintings thead {
+    background-color: var(--color-primary-1-100);
+}
+
+.paintings th {
+    padding: 10px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.paintings td {
+    padding: 8px;
+    border-bottom: 1px solid var(--color-neutral-300);
+}
+
+.painting-image {
+    display: block;
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+}
+
+.actions {
+    white-space: nowrap;
+}
+
+.actions button {
+    width: 36px;
+    height: 36px;
+    padding: 7px;
+    margin-right: 4px;
+    background-color: white;
+    border: 1px solid var(--color-neutral-300);
+}
+
+.actions button:hover {
+    background-color: var(--color-neutral-200);
+}
+
+.actions button img {
+    display: block;
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+@media (max-width: 700px) {
+    main {
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .search-box,
+    .bulk-box {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-box label {
+        align-self: flex-start;
+    }
+
+    input[type="text"] {
+        width: 100%;
+    }
+
+    .search-box select,
+    .bulk-box select,
+    .search-box button,
+    .bulk-box button {
+        width: 100%;
+    }
+
+    .paintings {
+        min-width: 680px;
+        font-size: 12px;
+    }
+
+    .paintings th,
+    .paintings td {
+        padding: 5px;
+    }
+
+    .painting-image {
+        width: 50px;
+        height: 50px;
+    }
+
+    .actions button {
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+    }
+
+    .actions button img {
+        width: 16px;
+        height: 16px;
+    }
+}
